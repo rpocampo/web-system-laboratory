@@ -12,12 +12,12 @@
 
 .pagination .page-item.active .page-link {
     background-color: #000000 !important;  /* Brown background for active page */
-    color: black !important;  /* White text for active page */
+    color: rgb(0, 0, 0) !important;  /* White text for active page */
     border-color: #000000 !important;
 }
 
 .pagination .page-link:hover {
-    background-color: #b50000 !important;  /* Lighter brown on hover */
+    background-color: #ff0000 !important;  /* Lighter brown on hover */
     color: black !important;
 }
 
