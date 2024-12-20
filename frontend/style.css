@@ -1,0 +1,18 @@
+    /* Custom Colors */
+    .bg-custom-primary {
+        background-color: #2c3e50; /* Dark Blue */
+      }
+      .bg-custom-secondary {
+        background-color: #e74c3c; /* Red */
+      }
+      .btn-custom {
+        background-color: #3498db; /* Light Blue */
+        color: white;
+      }
+      .btn-custom:hover {
+        background-color: #2980b9; /* Darker Blue */
+        color: white;
+      }
+      body {
+        background-color: #ecf0f1; /* Light Gray */
+      }

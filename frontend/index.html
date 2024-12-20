@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Playlist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Playlist App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm border-0 rounded-3">
+          <div class="card-header bg-custom-secondary text-white d-flex justify-content-between align-items-center py-2">
+            <h5 class="mb-0">My Playlist</h5>
+            <button class="btn btn-custom btn-sm" data-bs-toggle="modal" data-bs-target="#addSongModal">
+              Add New Song
+            </button>
+          </div>
+          <div class="card-body bg-white py-3">
+            <input type="text" id="searchInput" class="form-control form-control-sm mb-3 shadow-sm" placeholder="Search here...">
+            <ul class="list-group list-group-flush" id="songList">
+              <!-- Songs will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Song Modal -->
+  <div class="modal fade" id="addSongModal" tabindex="-1" aria-labelledby="addSongModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-custom-secondary text-white py-2">
+          <h5 class="modal-title" id="addSongModalLabel">Add New Song</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addSongForm">
+            <div class="mb-2">
+              <label for="songTitle" class="form-label fw-semibold small">Title</label>
+              <input type="text" class="form-control form-control-sm shadow-sm" id="songTitle" placeholder="Enter song title" required>
+            </div>
+            <div class="mb-2">
+              <label for="songArtist" class="form-label fw-semibold small">Artist</label>
+              <input type="text" class="form-control form-control-sm shadow-sm" id="songArtist" placeholder="Enter artist name" required>
+            </div>
+            <div class="modal-footer px-0 pb-0 pt-2">
+              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-custom btn-sm">Add Song</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-custom-primary text-white py-2">
+          <h5 class="modal-title" id="editModalLabel">Edit Song</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-2">
+            <label for="editSongTitle" class="form-label small">Title</label>
+            <input type="text" class="form-control form-control-sm" id="editSongTitle" required>
+          </div>
+          <div class="mb-2">
+            <label for="editSongArtist" class="form-label small">Artist</label>
+            <input type="text" class="form-control form-control-sm" id="editSongArtist" required>
+          </div>
+        </div>
+        <div class="modal-footer py-2">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-custom btn-sm" id="saveChanges">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
